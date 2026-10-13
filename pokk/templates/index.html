@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <a class="logout-button" href="{{ url_for('logout') }}">Logout</a>
+    <h1>Pokédex App</h1>
+    <div id="content-box">
+        <div id="pokemon-list"></div>
+        <div id="pokemon-info">
+            <img id="pokemon-img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Selected Pokémon">
+            <div id="pokemon-types"></div>
+            <div id="pokemon-description"></div>
+        </div>
+        <div id="pokemon-stats" aria-live="polite">
+            <h2>Base Stats</h2>
+            <div id="stats-list"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
